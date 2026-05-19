@@ -1,27 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stopwatch App</title>
-    <link rel="icon" href="download.png" type="image/png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-Commerce Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Our Store</h1>
+            <div class="cart-summary">
+                <span class="cart-icon">🛒</span>
+                <span id="cart-count" class="badge">0 items</span>
+            </div>
+        </div>
+    </header>
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="stopwatch">
-      <h1 id="display">00:00:00:00</h1>
+    <main class="container">
+        <!-- Product List Section -->
+        <section class="products-section">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+            </div>
+            
+            <div id="product-container" class="card-container">
+                <div class="loader">Loading products...</div>
+            </div>
+        </section>
 
-      <div class="buttons">
-        <button id="start" onclick="start()">Start</button>
-        <button id="stop" onclick="stop()">Stop</button>
-        <button id="reset" onclick="reset()">Reset</button>
-        <button id="lap" onclick="lap()">Lap</button>
-        <button id="clearLaps" onclick="clearLaps()">Clear Laps</button>
-      </div>
+        <!-- Cart Section -->
+        <aside class="cart-section">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items-container" class="cart-items">
+                <!-- Cart items will be rendered here -->
+                <p class="empty-cart-msg">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span>Total:</span>
+                    <span id="cart-total" class="cart-total-price">$0.00</span>
+                </div>
+                <button class="btn btn-primary w-100" onclick="alert('Checkout placeholder')">Checkout</button>
+            </div>
+        </aside>
+    </main>
 
-      <ul id="laps"></ul>
-    </div>
-  </body>
-  <script src="./script.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
